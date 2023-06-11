@@ -3,6 +3,14 @@ public class Kuchen {
 	private double gramosDeHarina;
 	private String tipoDeFruta;
 	private double gramosDeAzucar;
+	private double precio;
+	public Kuchen(String nombre, double gramosDeHarina, String tipoDeFruta, double gramosDeAzucar, double precio) {
+		this.nombre = nombre;
+		this.gramosDeHarina = gramosDeHarina;
+		this.tipoDeFruta = tipoDeFruta;
+		this.gramosDeAzucar = gramosDeAzucar;
+		this.precio = precio;
+	}
 
 	public String getNombre() {
 		return this.nombre;
@@ -36,11 +44,16 @@ public class Kuchen {
 		this.gramosDeAzucar = gramosDeAzucar;
 	}
 
-	public Kuchen(String nombre, double gramosDeHarina, String tipoDeFruta, double gramosDeAzucar) {
-		throw new UnsupportedOperationException();
+	public double getPrecio() {
+		return this.precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
 	}
 
 	public String toString() {
-		throw new UnsupportedOperationException();
+		return "Kuchen [nombre=" + nombre + ", gramosDeHarina=" + gramosDeHarina + ", tipoDeFruta=" + tipoDeFruta
+				+ ", gramosDeAzucar=" + gramosDeAzucar + ", precio=" + precio + "]";
 	}
 }

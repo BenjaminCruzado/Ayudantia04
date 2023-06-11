@@ -1,6 +1,5 @@
 public class Cliente {
 	private String nombre;
-	private double cuenta;
 	private double dinero;
 
 	public String getNombre() {
@@ -9,14 +8,6 @@ public class Cliente {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-	public double getCuenta() {
-		return this.cuenta;
-	}
-
-	public void setCuenta(double cuente) {
-		this.cuenta = cuente;
 	}
 
 	public double getDinero() {
@@ -28,14 +19,32 @@ public class Cliente {
 	}
 
 	public void comprarCafe(Cafe cafe) {
-		throw new UnsupportedOperationException();
+		if (dinero >= cafe.getPrecio()) {
+			dinero -= cafe.getPrecio();
+			System.out.println("El cliente " + nombre + " ha comprado un café: " + cafe.getNombre());
+		} else {
+			System.out.println("El cliente " + nombre + " no tiene suficiente dinero en la cuenta para comprar el café.");
+		}
 	}
 
 	public void comprarPizza(Pizza pizza) {
-		throw new UnsupportedOperationException();
+		if (dinero >= pizza.getPrecio()) {
+			dinero -= pizza.getPrecio();
+			System.out.println("El cliente " + nombre + " ha comprado una pizza: " + pizza.getNombre());
+		} else {
+			System.out.println("El cliente " + nombre + " no tiene suficiente dinero en la cuenta para comprar la pizza.");
+		}
 	}
 
 	public void comprarKuchen(Kuchen kuchen) {
-		throw new UnsupportedOperationException();
+		if (dinero >= kuchen.getPrecio()) {
+			dinero -= kuchen.getPrecio();
+			System.out.println("El cliente " + nombre + " ha comprado un kuchen: " + kuchen.getNombre());
+		} else {
+			System.out.println("El cliente " + nombre + " no tiene suficiente dinero en la cuenta para comprar el kuchen.");
+		}
+	}
+	public String toString() {
+		return "Cliente [nombre=" + nombre + ", dinero=" + dinero + "]";
 	}
 }

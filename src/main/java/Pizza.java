@@ -4,7 +4,12 @@ public class Pizza {
 	private String tamaño;
 	private double precio;
 	private ArrayList<String> ingredientes;
-
+	public Pizza(String nombre, String tamaño, double precio, ArrayList<String> ingredientes) {
+		this.nombre = nombre;
+		this.tamaño = tamaño;
+		this.precio = precio;
+		this.ingredientes = ingredientes;
+	}
 	public String getNombre() {
 		return this.nombre;
 	}
@@ -21,6 +26,13 @@ public class Pizza {
 		this.tamaño = tamaño;
 	}
 
+	public ArrayList<String> getIngredientes() {
+		return this.ingredientes;
+	}
+
+	public void setIngredientes(ArrayList<String> ingredientes) {
+		this.ingredientes = ingredientes;
+	}
 	public double getPrecio() {
 		return this.precio;
 	}
@@ -29,19 +41,8 @@ public class Pizza {
 		this.precio = precio;
 	}
 
-	public ArrayList<String> getIngredientes() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void setIngredientes(ArrayList<String> ingredientes) {
-		throw new UnsupportedOperationException();
-	}
-
-	public Pizza(String nombre, String tamaño, double precio, ArrayList<String> ingredientes) {
-		throw new UnsupportedOperationException();
-	}
-
 	public String toString() {
-		throw new UnsupportedOperationException();
+		return "Pizza [nombre=" + nombre + ", tamaño=" + tamaño + ", precio=" + precio + ", ingredientes=" + ingredientes
+				+ "]";
 	}
 }
