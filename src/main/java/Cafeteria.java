@@ -140,7 +140,7 @@ public class Cafeteria {
 		return null;
 	}
 
-	public void agregarTrabajador(Trabajador trabajador) {
+	public void agregarTrabajadores(Trabajador trabajador) {
 		this.trabajadores.add(trabajador);
 	}
 

@@ -1,6 +1,10 @@
 public class Cliente {
 	private String nombre;
 	private double dinero;
+	public Cliente(String nombre, double dinero) {
+		this.nombre = nombre;
+		this.dinero = dinero;
+	}
 
 	public String getNombre() {
 		return this.nombre;
